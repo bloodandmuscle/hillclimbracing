@@ -1,3 +1,17 @@
+window.onload = () => {
+    console.log("Sistem hazır!");
+    const startBtn = document.getElementById('start-btn');
+    if(startBtn) {
+        startBtn.onclick = () => {
+            // Oyun başlatma kodların buraya gelecek
+            console.log("Buton çalıştı!");
+            initAudio(); // Ses motorunu tetikle
+            document.getElementById('menu-screen').style.display = 'none';
+            document.getElementById('selection-screen').style.display = 'flex';
+        };
+    }
+};
+
 const { Engine, Render, Runner, Bodies, Composite, Constraint, Body, Events } = Matter;
 
 let engine, render, runner, gameMode, vehicleType;
