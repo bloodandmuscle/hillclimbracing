@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hill Climb Racing Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fizik motoru en başta yüklenmeli -->
+    <script src="https://cloudflare.com"></script>
+</head>
+<body>
+
+    <!-- Giriş Ekranı -->
+    <div id="menu-screen" class="overlay">
+        <h1 class="title">HILL CLIMB PRO</h1>
+        <button id="start-btn" class="btn">OYUNA BAŞLA</button>
+    </div>
+
+    <!-- Seçim Ekranı -->
+    <div id="selection-screen" class="overlay" style="display:none;">
+        <h2 id="selection-title">MOD SEÇİN</h2>
+        <div id="mode-buttons">
+            <button id="btn-story" class="btn">HİKAYE</button>
+            <button id="btn-free" class="btn">SERBEST</button>
+        </div>
+        <div id="vehicle-buttons" style="display:none;">
+            <button id="btn-bike" class="btn orange">MOTOSİKLET</button>
+            <button id="btn-truck" class="btn blue">KAMYON</button>
+        </div>
+    </div>
+
+    <!-- HUD -->
+    <div id="game-ui" style="display:none;">
+        <div class="hud-item">ALTIN: <span id="coin-val">0</span></div>
+        <div class="hud-item">MESAFE: <span id="dist-val">0</span>m</div>
+        <div id="fuel-wrap"><div id="fuel-bar"></div></div>
+    </div>
+
+    <!-- Mobil Butonlar -->
+    <div id="mobile-controls" style="display:none;">
+        <div id="m-brake" class="m-btn">FREN</div>
+        <div id="m-gas" class="m-btn">GAZ</div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
